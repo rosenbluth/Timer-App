@@ -13,19 +13,42 @@ class TimersDashboard extends React.Component {
                 id: uuid.v4(),
                 elapsed: 1273998,
                 runningSince: null
-            }
-        ]
-    };
+            },
+        ],
+      };
+
+        handleCreateFormSubmit = (timer) => {
+          this.createTimer(timer);
+        }
+
+        createTimer = (timer) => {
+          const t = helpers.newTimer(timer);
+          this.setState({
+            timers: this.state.timers.concat(t),
+          });
+        };
+
+        createTimer = (timer) => {
+          const t = helpers.newTimer(timer);
+          this.setState({
+            timers: this.state.timers.concat(t),
+          });
+        };
+
 
     render() {
         return (
             <div className='ui three column centered grid'>
                 <div className='column'>
-                    <EditableTimerList timers={this.state.timers}/>
-                    <ToggleableTimerForm/>
-                </div>
+                    <EditableTimerList
+                      timers={this.state.timers}
+                    />
+                <ToggleableTimerForm
+                onFormSubmit={this.handleCreateFormSubmit}
+              />
             </div>
-        )
+          </div>
+        );
     }
 }
 
@@ -69,7 +92,7 @@ class TimerForm extends React.Component {
     handleSubmit = () => {
       this.setState({
         id: this.state.id,
-        title: this.state.title
+        title: this.state.title,
         project: this.state.project
       })
     }
