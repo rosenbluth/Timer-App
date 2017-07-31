@@ -90,7 +90,7 @@ class TimerForm extends React.Component {
         this.setState({project: e.target.value});
     };
     handleSubmit = () => {
-      this.setState({
+      this.props.onFormSubmit({
         id: this.state.id,
         title: this.state.title,
         project: this.state.project
@@ -176,7 +176,7 @@ class Timer extends React.Component {
         const elapsedString = helpers.renderElapsedString(this.props.elapsed);
         return (
             <div className="ui centered card">
-                <div className="content">
+                <div className="content">\
                     <div className="header">
                         {this.props.title}
                     </div>
