@@ -1,4 +1,4 @@
-This is an multi-timer application. It allows the user to run timers and track multiple events simultaneously. This was built using React.js and Node.js. It makes calls to the server an stores data in a JSON file. The data is persistent; if you reload the page or close and reopen the page the timers continue to work correctly. This application has full CRUD capabilities.
+This is an multi-timer application. It allows the user to run timers and track multiple events simultaneously. This was built using React.js and Node.js. It makes calls to the server an stores data in a JSON file. The data is persistent; if the user reloads the page or closes and reopens the page later on, the timers will continue to work correctly. This application has full CRUD capabilities.
 
 ![screen shot 2017-08-13 at 4 55 58 pm](https://user-images.githubusercontent.com/19808088/29253654-c06374ec-8048-11e7-8de6-f2500efb1782.png)
 
