@@ -178,9 +178,7 @@ class TimerForm extends React.Component {
     }
 
     render() {
-        const submitText = this.props.id
-            ? 'Update'
-            : 'Create';
+        const submitText = this.props.id ? 'Update' : 'Create';
 
         return (
             <div className='ui centered card'>
